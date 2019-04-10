@@ -17,7 +17,7 @@
 				<img :src="item.avatar" />
 			</li>
 		</ul>
-		<div class="foot">
+		<div class="foot box-width">
 			<img src="static/icon/audio_icon.png" />
 			<div class="input" contenteditable="true"></div>
 			<img src="static/icon/face_icon.png" />
@@ -137,7 +137,8 @@ export default {
 .foot {
 	position: fixed;
 	bottom: 0;
-	width: 100%;
+	left: 0;
+	right: 0;
 	display: flex;
 	justify-content: center;
 	align-items: flex-end;

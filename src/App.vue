@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="box-width">
     <router-view/>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
 <style>
 	html{
 	color:#000;
-	background:#FFF;
+	background:#efefef;
 	}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,footer,article,aside,header,section,nav,figure,figcaption,hgroup{
 		margin:0;
 		padding:0;
@@ -67,5 +67,15 @@ export default {
 	}
 	img {
 		width: 100%;
+	}
+	@media screen and (min-width: 768px) {
+		.box-width{
+			max-width: 750px;
+			margin: 0 auto;
+		}
+		.m-container-max {
+			width:750px;
+			margin: 0 auto
+		}
 	}
 </style>

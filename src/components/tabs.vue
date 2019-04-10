@@ -1,5 +1,5 @@
 <template>
-    <ul class="mtabs" id="tabs">
+    <ul class="mtabs box-width" id="tabs">
         <li class="mtab" v-if="$route.path !== tab.url" v-for="(tab, index) in tabs">
             <router-link :to="tab.url">
                 <img :src="tab.icon" />
@@ -79,6 +79,7 @@ export default {
     position: fixed;
     bottom: 0;
     left: 0;
+    right: 0;
     width: 100%;
     padding: 5px 0;
     border-top: 1px solid #eee;
