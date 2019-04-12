@@ -1,7 +1,7 @@
 <template>
 	<div class="mchat-box">
 		<p class="mchat-loadingmore">加载更多</p>
-		<ul clas='mchat-box'>
+		<ul>
 			<li class="left" v-for="item in chat_msg" v-if="item.fid == 0">
 				<img :src="item.avatar" />
 				<div class="item-info">
@@ -74,25 +74,28 @@ export default {
 .mchat-box {
 	/* border: 1px solid red; */
 	background: #ededed;
-	min-height: 100vh;
+	margin-bottom: 50px;
 }
 .mchat-loadingmore {
 	text-align: center;
 	padding: 10px 0;
 	color: cornflowerblue;
 }
-.mchat-box li {
+.mchat-box ul {
+	min-height: 100vh;
+}
+.mchat-box ul li {
 	display: flex;
 	padding: 10px;
 }
-.mchat-box li img {
+.mchat-box ul li img {
 	width: 40px;
 	height: 40px;
 	border-radius: 3px;
 	border: 1px solid #ddd;
 	margin-right: 10px;
 }
-.mchat-box li .item-info {
+.mchat-box ul li .item-info {
 	/* border: 1px solid red; */
 	/* margin-left: 10px; */
 }
@@ -106,21 +109,21 @@ export default {
 	transform: rotate(45deg);
 	background: #fff;
 }
-.mchat-box li .item-info p {
+.mchat-box ul li .item-info p {
 	max-width: 200px;
 	padding: 5px;
 	background: #fff;
 	border-radius: 3px;
 	position: relative;
 }
-.mchat-box li.right {
+.mchat-box ul li.right {
 	justify-content: flex-end;
 }
-.mchat-box li.right img {
+.mchat-box ul li.right img {
 	margin-right: 0;
 	margin-left: 10px;
 }
-.mchat-box li.right .item-info p {
+.mchat-box ul li.right .item-info p {
 	background: #92e648;
 	color: #000;
 }
@@ -135,7 +138,7 @@ export default {
 	background: #92e648;
 }
 .foot {
-	position: fixed;
+	position: sticky;
 	bottom: 0;
 	left: 0;
 	right: 0;
@@ -144,8 +147,8 @@ export default {
 	align-items: flex-end;
 }
 .foot img {
-	width: 20px;
-	height: 20px;
+	width: 30px;
+	height: 30px;
 	padding: 0 5px;
 	margin: 10px 0;
 }
@@ -153,7 +156,7 @@ export default {
 	flex: 1;
 	margin: 5px;
 	outline: none;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	background: #fff;
 	max-height: 100px;
 	overflow: scroll;
@@ -163,7 +166,7 @@ export default {
 	background: #1AAD19;
 	color: #fff;
 	margin: 5px 10px 5px 0;
-	padding: 5px 10px;
+	padding: 10px 10px;
 	border-radius: 4px;
 }
 </style>
