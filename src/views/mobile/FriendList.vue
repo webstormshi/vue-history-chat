@@ -10,7 +10,7 @@
         <ul class="friendlist">
              <h2>联系人</h2>
             <li v-for="item in friendlist" @click="handleFriend(item.uid)">
-                <img :src="item.avatar" />
+                <div class="img" :style="{'backgroundImage': `url(${item.avatar})`}"></div>
                 <p>{{item.nickname}}</p>
             </li>
         </ul>
@@ -192,7 +192,7 @@ export default {
 .friendlist li + li {
     border-top: 1px solid #eee;
 }
-.friendlist li img {
+.friendlist li .img {
     width: 40px;
     width: 40px;
     margin-right: 10px;
