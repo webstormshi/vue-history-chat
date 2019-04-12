@@ -63,7 +63,6 @@ export default {
 		height: 100%;
 		background: #f5f5f5;
 		position: relative;
-		overflow: hidden;
 	}
 	img {
 		width: 100%;

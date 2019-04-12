@@ -116,7 +116,6 @@ export default {
 .mchat-box {
 	/* border: 1px solid red; */
 	background: #ededed;
-	margin-bottom: 50px;
 }
 .mchat-loadingmore {
 	text-align: center;

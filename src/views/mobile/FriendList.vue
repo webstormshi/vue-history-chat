@@ -194,7 +194,7 @@ export default {
 }
 .friendlist li .img {
     width: 40px;
-    width: 40px;
+    height: 40px;
     margin-right: 10px;
     background-size: cover;
     background-repeat: no-repeat;
