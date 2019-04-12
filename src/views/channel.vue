@@ -4,8 +4,8 @@
             <div class="name">请选择频道</div>
             <v-close></v-close>
         </div>
-        <ul class="channel">
-            <li v-for="item in 10">
+        <ul class="channel-list">
+            <li v-for="item in 20">
                 <img src="static/headimg/headimg01.jpg" />
                 <div class="channel-info">
                     <h1>我是三大白骨精</h1>
@@ -49,21 +49,21 @@ export default {
     overflow-y: scroll;
     box-shadow: 0 0 10px 0px #999;
 }
-.top_bar {
+.channel_box .top_bar {
     width: 100%;
     height: 45px;
     position: sticky;
     top: 0;
     background: #f5f5f5;
 }
-.top_bar .name {
+.channel_box .top_bar .name {
     float: left;
     font-size: 20px;
     line-height: 45px;
     margin-left: 26px;
     color: #4a4a4a;
 }
-.channel {
+.channel_box .channel {
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
@@ -79,18 +79,18 @@ export default {
     box-shadow: 0 0 3px 0px #999;
     transition: transform 0.5s;
 }
-.channel li img {
+.channel-list li img {
     width: 100px;
     height: 100px;
 }
-.channel li .channel-info {
+.channel-list li .channel-info {
     margin-left: 10px;
 }
-.channel li .channel-info h1 {
+.channel-list li .channel-info h1 {
     font-size: 20px;
     color: #333;
 }
-.channel li .channel-info h2 {
+.channel-list li .channel-info h2 {
     font-size: 12px;
     color: #999;
     overflow: hidden;
@@ -99,15 +99,15 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
-.channel li .channel-info p {
+.channel-list li .channel-info p {
     font-size: 14px;
     display: flex;
     justify-content: space-between;
 }
-.channel li:hover {
+.channel-list li:hover {
     transform: scale(1.1);
 }
-.channel li .channel-info h3 a{
+.channel-list li .channel-info h3 a{
     display: inline-block;
     margin-right: 30px;
     font-size: 12px;
@@ -116,7 +116,7 @@ export default {
     color: #fff;
     background: #1AAD19;
 }
-.channel li .channel-info h3 a:hover {
+.channel-list li .channel-info h3 a:hover {
     background: #179B16;
     cursor: pointer;
 }

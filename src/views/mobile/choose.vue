@@ -68,14 +68,14 @@ export default {
     font-size: 12px;
     color: #333;
 }
-ul li img{
+.modal ul li img{
     width: 60px;
     height: 60px;
     border-radius: 50%;
     display: flex;
     margin-bottom: 10px;
 }
-.action-box {
+.modal .action-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -85,7 +85,7 @@ ul li img{
     left: 0;
     background: #fff;
 }
-.action-box a {
+.modal .action-box a {
     display: inline-block;
     width: 150px;
     height: 30px;
@@ -96,7 +96,7 @@ ul li img{
     border-radius: 4px;
     font-size: 14px;
 }
-.action-box .confirm {
+.modal .action-box .confirm {
     color: #fff;
     background: #1AAD19;
 }

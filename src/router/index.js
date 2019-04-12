@@ -13,7 +13,7 @@ import Message from '@/views/mobile/Message'
 import FriendList from '@/views/mobile/FriendList'
 import Interact from '@/views/mobile/Interact'
 import Mine from '@/views/mobile/Mine'
-import Usercard from '@/views/mobile/Usercard'
+import Usercard from '@/views/mobile/UserCard'
 
 import mFriend from '@/views/mobile/friendcircle'     // 选择频道
 import mLogin from '@/views/mobile/login'     // 选择频道

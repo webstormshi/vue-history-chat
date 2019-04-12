@@ -54,21 +54,21 @@ export default {
     overflow-y: scroll;
     box-shadow: 0 0 10px 0px #999;
 }
-.top_bar {
+.modal .top_bar {
     width: 100%;
     height: 45px;
     position: sticky;
     top: 0;
     background: #f5f5f5;
 }
-.top_bar .name {
+.modal .top_bar .name {
     float: left;
     font-size: 20px;
     line-height: 45px;
     margin-left: 26px;
     color: #4a4a4a;
 }
-ul {
+.modal  ul {
     display: flex;
     flex-wrap: wrap;
     padding: 0 10px;
@@ -77,7 +77,7 @@ ul {
     overflow: scroll;
     padding-bottom: 20px;
 }
-ul li {
+.modal ul li {
     margin: 10px;
     text-align: center;
     box-shadow: 0 0 3px 0px #999;
@@ -85,28 +85,28 @@ ul li {
     transition: transform 0.3s;
     box-sizing: border-box;
 }
-ul li:hover {
+.modal ul li:hover {
     transform: scale(1.1) translate(0);
     border: 1px solid #1AAD19;
 }
-ul li:visited {
+.modal ul li:visited {
     border: 1px solid #1AAD19;
 }
-ul li h2 {
+.modal ul li h2 {
     font-size: 14px;
     color: #333;
 }
-ul li img{
+.modal ul li img{
     width: 80px;
     height: 80px;
 }
-.action-box {
+.modal .action-box {
     display: flex;
     justify-content: space-around;
     align-items: center;
     height: 50px;
 }
-.action-box a {
+.modal .action-box a {
     display: inline-block;
     width: 100px;
     height: 30px;
@@ -117,7 +117,7 @@ ul li img{
     border-radius: 4px;
     font-size: 14px;
 }
-.action-box .confirm {
+.modal .action-box .confirm {
     color: #fff;
     background: #1AAD19;
 }
