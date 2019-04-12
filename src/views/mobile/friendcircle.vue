@@ -125,50 +125,50 @@ export default {
     max-width: 200px;
     font-size: 16px;
 }
-.menu {
+.frined .menu {
     background: #fff;
     overflow: scroll;
 }
-.menu li {
+.frined .menu li {
     display: flex;
     align-items: flex-start;
     padding: 20px;
     border-bottom: 1px solid #eee;
 }
-.menu li .avatar {
+.frined .menu li .avatar {
     width: 30px;
     height: 30px;
     border-radius: 4px;
     border: 1px solid #eee;
 }
-.menu li .detail {
+.frined .menu li .detail {
     margin-left: 10px;
 }
-.menu li .detail h1 {
+.frined .menu li .detail h1 {
     font-weight: bold;
     font-size: 14px;
     color: #4e5a89;
     margin-bottom: 5px;
 }
-.menu li .detail .desc {
+.frined .menu li .detail .desc {
     color: #4e5a89;
     margin: 3px;
 }
-.menu li .detail .imgs-box img {
+.frined .menu li .detail .imgs-box img {
     width: 100px;
     margin: 5px;
 }
-.menu li .detail .small {
+.frined .menu li .detail .small {
     color: #999;
     font-size: 10px;
 }
-.menu li .detail .comment {
+.frined .menu li .detail .comment {
     background: #eee;
     border-radius: 5px;
     padding: 8px;
     margin-top: 5px;
 }
-.menu li .detail .thumbs {
+.frined .menu li .detail .thumbs {
     color: #4e5a89;
     font-weight: bold;
 }

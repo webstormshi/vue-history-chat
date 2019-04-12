@@ -4,6 +4,7 @@
             <img :src="userinfo.avatar" />
             <div class="userinfo">
                 <h1>{{userinfo.nickname}}</h1>
+                <p>当前角色：{{userinfo.actor}}【{{userinfo.play}}】</p>
                 <a>微信号：{{userinfo.nickname}}</a>
             </div>
         </header>
@@ -26,6 +27,8 @@ export default {
                 uid: 1,
                 nickname: '怒放的生命',
                 wxno: 'sy1446631745',
+                play: '西游记',
+                actor: '孙悟空',
                 avatar: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
                 userbg: 'https://wx4.sinaimg.cn/orj360/a3255108gy1g1wgndaltij20dw090aa5.jpg'
             },
@@ -80,13 +83,13 @@ export default {
 .mine header .userinfo h1 {
     font-size: 18px;
 }
-.mine header .userinfo a {
+.mine header .userinfo a, p {
     position: relative;
     display: block;
-    margin-top: 10px;
+    margin-top: 5px;
     color: #666;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: 400;
     text-decoration: none;
 }
 .mine header .userinfo a::after {

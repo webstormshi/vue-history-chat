@@ -1,5 +1,5 @@
 <template>
-    <div class="friend">
+    <div class="interact">
         <header :style="{'backgroundImage': `url(${userinfo.userbg})`}">
             <h1>{{userinfo.nickname}}</h1>
             <img :src="userinfo.avatar" />
@@ -66,7 +66,7 @@ export default {
                     thumbs: [{ uid: '', name: 'jaingix', }, { uid: '', name: 'jaingix', }, { uid: '', name: 'jaingix', }],
                     thumbs_total: 15,
                     time: '3小时以前',
-                    comments: [{ fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}]
+                    comments: [{ fid: 1, from: '用户1', to: '用户2', tid: 2, content: '我是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是你的演'}, { fid: 2, tid: 1, from: '用户1', content: '我是你的演我是你的演'}, { fid: 2, from: '用户2', tid: 1, content: '我是你的演我是你的演'}]
                 },
                 {
                     'avatar': 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
@@ -75,7 +75,7 @@ export default {
                     thumbs: [{ uid: '', name: 'jaingix', }, { uid: '', name: 'jaingix', }, { uid: '', name: 'jaingix', }],
                     thumbs_total: 15,
                     time: '2天以前',
-                    comments: [{ fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}]
+                    comments: [{ fid: 1, from: '用户1', to: '用户2', tid: 2, content: '我是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是你的演'}, { fid: 2, tid: 1, from: '用户1', content: '我是你的演我是你的演'}, { fid: 2, from: '用户2', tid: 1, content: '我是你的演我是你的演'}]
                 },
                 {
                     'avatar': 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K',
@@ -85,7 +85,7 @@ export default {
                     thumbs_total: 15,
                     time: '刚刚',
                     imgs: ['https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2026315314,1997848504&fm=26&gp=0.jpg', 'https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3635017255,2587566580&fm=26&gp=0.jpg'],
-                    comments: [{ fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}, { fid: 2, tid: 1, content: '我是你的演我是你的演'}]
+                    comments: [{ fid: 1, from: '用户1', to: '用户2', tid: 2, content: '我是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是你的演'}, { fid: 2, tid: 1, from: '用户1', content: '我是你的演我是你的演'}, { fid: 2, from: '用户2', tid: 1, content: '我是你的演我是你的演'}]
                 }
             ]
         }
@@ -94,20 +94,20 @@ export default {
 </script>
 
 <style>
-.friend {
+.interact {
     height: 100vh;
     background: #f5f5f5;
     overflow: scroll;
     margin-bottom: 60px;
 }
-.friend header {
+.interact header {
     position: relative;
     height: 150px;
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
 }
-.friend header img{
+.interact header img{
     width: 100px;
     height: 100px;
     background: #000;
@@ -116,7 +116,7 @@ export default {
     bottom: -20px;
     right: 20px;
 }
-.friend header h1 {
+.interact header h1 {
     position: absolute;
     bottom: 0;
     right: 130px;
@@ -125,51 +125,51 @@ export default {
     max-width: 200px;
     font-size: 16px;
 }
-.menu {
+.interact .menu {
     background: #fff;
     overflow: scroll;
     margin-bottom: 60px;
 }
-.menu li {
+.interact .menu li {
     display: flex;
     align-items: flex-start;
     padding: 20px;
     border-bottom: 1px solid #eee;
 }
-.menu li .avatar {
+.interact .menu li .avatar {
     width: 30px;
     height: 30px;
     border-radius: 4px;
     border: 1px solid #eee;
 }
-.menu li .detail {
+.interact .menu li .detail {
     margin-left: 10px;
 }
-.menu li .detail h1 {
+.interact .menu li .detail h1 {
     font-weight: bold;
     font-size: 14px;
     color: #4e5a89;
     margin-bottom: 5px;
 }
-.menu li .detail .desc {
+.interact .menu li .detail .desc {
     color: #4e5a89;
     margin: 3px;
 }
-.menu li .detail .imgs-box img {
+.interact .menu li .detail .imgs-box img {
     width: 100px;
     margin: 5px;
 }
-.menu li .detail .small {
+.interact .menu li .detail .small {
     color: #999;
     font-size: 10px;
 }
-.menu li .detail .comment {
+.interact .menu li .detail .comment {
     background: #eee;
     border-radius: 5px;
     padding: 8px;
     margin-top: 5px;
 }
-.menu li .detail .thumbs {
+.interact .menu li .detail .thumbs {
     color: #4e5a89;
     font-weight: bold;
 }
