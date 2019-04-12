@@ -3,7 +3,7 @@
         <ul class="friendlist">
             <h2>群组</h2>
             <li v-for="item in official" @click="handleOfficial(item.uid)">
-                <img :src="item.avatar" />
+                <div class="img" :style="{'backgroundImage': `url(${item.avatar})`}"></div>
                 <p>{{item.name}}</p>
             </li>
         </ul>
@@ -194,7 +194,11 @@ export default {
 }
 .friendlist li img {
     width: 40px;
+    width: 40px;
     margin-right: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 .friendlist li p {
     font-size: 16px;

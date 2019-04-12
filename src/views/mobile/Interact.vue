@@ -136,8 +136,8 @@ export default {
     border-bottom: 1px solid #eee;
 }
 .interact .menu li .avatar {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     border-radius: 4px;
     border: 1px solid #eee;
 }
@@ -156,6 +156,8 @@ export default {
 .interact .menu li .detail .desc {
     color: #4e5a89;
     margin: 3px;
+    font-size: 14px;
+    font-weight: 400;
 }
 .interact .menu li .detail .imgs-box img {
     width: 100px;
