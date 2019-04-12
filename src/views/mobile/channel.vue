@@ -1,5 +1,5 @@
 <template>
-    <div class='channel_box'>
+    <div class='mchannel'>
         <header>古今穿越大乐透</header>
         <ul>
             <li v-for="item in 10">
@@ -38,19 +38,19 @@ export default {
 </script>
 
 <style>
-.channel_box {
+.mchannel {
     max-height: 100vh;
     overflow-y: scroll;
     background: #eee;
 }
-header {
+.mchannel header {
     padding: 15px 0;
     text-align: center;
     font-size: 18px;
     background: #fff;
     border: 1px solid #eee;
 }
-ul li {
+.mchannel ul li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -58,30 +58,30 @@ ul li {
     transition: transform 0.5s;
     background: #fff;
 }
-.channel_box ul li+li {
+.mchannel ul li+li {
     border-top: .3125rem /* 5/16 */ solid #eee;
 }
-.channel_box ul li img {
+.mchannel ul li img {
     width: 3.125rem /* 50/16 */;
     height: 3.125rem /* 50/16 */;
 }
-.channel_box ul li .channel-info {
+.mchannel ul li .channel-info {
     margin-left: 10px;
 }
-.channel_box ul li .channel-info h1 {
+.mchannel ul li .channel-info h1 {
     font-size: 20px;
     color: #333;
 }
-.channel_box ul li .channel-info h2 {
+.mchannel ul li .channel-info h2 {
     font-size: 12px;
     color: #999;
 }
-ul li .channel-info p {
+.mchannel ul li .channel-info p {
     font-size: 14px;
     display: flex;
     justify-content: space-between;
 }
-.channel_box ul li .channel-info h3 a{
+.mchannel ul li .channel-info h3 a{
     display: inline-block;
     margin-right: 30px;
     margin-top: 5px;
@@ -91,11 +91,11 @@ ul li .channel-info p {
     color: #fff;
     background: #1AAD19;
 }
-.channel_box ul li .channel-info h3 a:hover {
+.mchannel ul li .channel-info h3 a:hover {
     background: #179B16;
     cursor: pointer;
 }
-.bottomLine {
+.mchannel .bottomLine {
     background: #eee;
     padding: 20px;
     text-align: center;

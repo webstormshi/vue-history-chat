@@ -63,13 +63,13 @@ export default {
     margin-left: 26px;
     color: #4a4a4a;
 }
-.channel_box .channel {
+.channel_box .channel-list {
     padding: 20px 30px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-.channel li {
+.channel_box .channel-list li {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,18 +79,18 @@ export default {
     box-shadow: 0 0 3px 0px #999;
     transition: transform 0.5s;
 }
-.channel-list li img {
+.channel_box .channel-list li img {
     width: 100px;
     height: 100px;
 }
-.channel-list li .channel-info {
+.channel_box .channel-list li .channel-info {
     margin-left: 10px;
 }
-.channel-list li .channel-info h1 {
+.channel_box .channel-list li .channel-info h1 {
     font-size: 20px;
     color: #333;
 }
-.channel-list li .channel-info h2 {
+.channel_box .channel-list li .channel-info h2 {
     font-size: 12px;
     color: #999;
     overflow: hidden;
@@ -99,15 +99,15 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
 }
-.channel-list li .channel-info p {
+.channel_box .channel-list li .channel-info p {
     font-size: 14px;
     display: flex;
     justify-content: space-between;
 }
-.channel-list li:hover {
+.channel_box .channel-list li:hover {
     transform: scale(1.1);
 }
-.channel-list li .channel-info h3 a{
+.channel_box .channel-list li .channel-info h3 a{
     display: inline-block;
     margin-right: 30px;
     font-size: 12px;
@@ -116,7 +116,7 @@ export default {
     color: #fff;
     background: #1AAD19;
 }
-.channel-list li .channel-info h3 a:hover {
+.channel_box .channel-list li .channel-info h3 a:hover {
     background: #179B16;
     cursor: pointer;
 }
