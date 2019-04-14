@@ -137,7 +137,7 @@ export default {
   computed: {
   	chat_title: function(){
   		if(this.currentChat==0){
-   			return '聊天室('+(this.online_list.length-1)+')人';
+   			return '四大名聊天室('+(this.online_list.length-1)+')人';
    		}else{
    			return this.filterName[this.currentChat].username;
    		}
@@ -158,10 +158,10 @@ export default {
 	    var arr=[];
 	    var _this=this;
 	    this.online_list.forEach(function (item){
-	    		if(item.username=='聊天室'){
+	    		if(item.username.indexOf('聊天室')>-1){
 	    			 arr.push(item);
 	    		}
-	        if(item.username.indexOf(_this.search_text)!=-1&&item.username!='聊天室'){
+	        if(item.username.indexOf(_this.search_text)!=-1&&item.username.indexOf('聊天室')==-1){
 	            arr.push(item);
 	        }
 	    })
