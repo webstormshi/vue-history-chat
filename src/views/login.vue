@@ -2,7 +2,7 @@
   <div>
   	<div class="login_box">
   		<div class="top_bar">
-  			<div class="name">MyChat v1.1</div>
+  			<div class="name">四大名聊 V 0.1.0</div>
   			<v-close></v-close>
   		</div>
   		<div class="choose_head">
@@ -75,7 +75,7 @@ export default {
 		  		//localStorage.setItem("curUser", JSON.stringify(userinfo));
 		  		//登陆后立即发送用户信息去服务端
 					socket.emit('message', {type:'onlinelist',username:userinfo.userName,userhead:userinfo.headimg,usermsg:{body:'',time:''}});
-		  		_this.$router.push({ name: 'mchat', params: userinfo});
+		  		_this.$router.push({ name: 'chat', params: userinfo});
   			}
   		});
   		socket.on('loginYZSB',function(loginInfo){
