@@ -19,10 +19,10 @@
 		</ul>
 		<div class="foot box-width">
 			<img src="static/icon/audio_icon.png" />
-			<div class="input" contenteditable="true"></div>
+			<div class="input" contenteditable="true">{{myMsg}}</div>
 			<img src="static/icon/face_icon.png" />
 			<!-- <img src="static/icon/add_icon.png" /> -->
-			<a class="send-btn">发送</a>
+			<a class="send-btn" @click="send_msg">发送</a>
 		</div>
 	</div>	
 </template>
@@ -32,6 +32,7 @@ export default {
 	name: 'mchat',
 	data() {
 		return {
+			myMsg: '',
 			chat_msg: [
 				{
 					fid: '0',
@@ -108,6 +109,49 @@ export default {
 	},
 	mounted() {
 		document.title = `世纪大混战群(${this.chat_msg.length})`;
+		//监听回车
+		var _this = this;
+		document.onkeyup = function (e) {
+			var code = e.charCode || e.keyCode; 
+			if (code == 13) {  
+			_this.send_msg();
+			}  
+		}
+	},
+	methods: {
+		send_msg(){
+			console.log(this.myMsg);
+			var _this=this;
+			if(this.myMsg.replace(/\s+/g,"")==""){
+				if(this.sendEmptyFlag==0){
+					this.sendEmptyFlag=1;
+						var sendEmptyTimer=setTimeout(function(){
+						_this.sendEmptyFlag=0;
+						clearTimeout(sendEmptyTimer);
+					},2500);
+				};
+				return;
+			}
+			var clearMsg=this.myMsg;
+			clearMsg=clearMsg.replace(new RegExp('<','gm'),'&lt')
+			
+			var myInformation = {
+				type:'msg',
+			username:this.myName,
+			userhead:this.myHead,
+			usermsg:{body:clearMsg,time:'0:00'}
+			};
+			if(this.currentChat!=0){
+				myInformation.type='single_msg';
+				myInformation.to=this.chat_title;
+			}
+			if(this.myMsg){
+				//this.msg_list.push(myInformation);
+				// 发送本机的消息
+			socket.emit('message', myInformation);
+			this.myMsg='';
+			}
+		}
 	}
 }
 </script>

@@ -16,7 +16,6 @@
                 <span class="name">{{item.desc}}</span>
             </li>
         </ul>
-        <p class="copy-right">版权所有 @1787845636@qq.com</p>
     </div>
 </template>
 
