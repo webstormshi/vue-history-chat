@@ -1,7 +1,7 @@
 <template>
     <div class="message">
         <ul class="msglist" v-if="msgList.length > 0">
-            <li v-for="item in msgList" @click="handleClick(item.groupid)">
+            <li v-for="item in msgList" @click="handleClick(item)">
                 <div class="avatar-box">
                     <span class="red-dot" v-if="item.news_count > 1 || item.news_count === '99+'">{{item.news_count}}</span>
                     <div class="img" :style="{'backgroundImage': `url(${item.avatar})`}"></div>
@@ -25,6 +25,9 @@
 <script>
 export default {
     name: 'message',
+    props: {
+        'param': Object
+    },
     data() {
         return {
             msgList: [
@@ -76,9 +79,12 @@ export default {
             ]
         }
     },
+    mounted() {
+        console.log('user', this.$route);
+    },
     methods: {
-        handleClick(groupid) {
-            this.$router.push({ name: 'mchat' });
+        handleClick(group) {
+            this.$router.push({ name: 'mchat', params: { ...this.$route.params, group: group } });
         }
     }
 }

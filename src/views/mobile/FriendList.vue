@@ -21,6 +21,9 @@
 <script>
 export default {
     name: 'FriendList',
+    props: {
+        'param': Object
+    },
     data() {
         return {
             official: [
@@ -155,8 +158,8 @@ export default {
         }
     },
     methods: {
-        handleOfficial(uid) {
-            this.$router.push({ name: 'mchat' });
+        handleOfficial() {
+            this.$router.push({ name: 'mSingleChat', params: this.$route.query });
         },
         handleFriend(uid) {
             this.$router.push({ name: 'UserCard' });

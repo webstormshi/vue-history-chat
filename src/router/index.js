@@ -18,19 +18,20 @@ import Usercard from '@/views/mobile/UserCard'
 import mFriend from '@/views/mobile/friendcircle'     // 选择频道
 import mLogin from '@/views/mobile/login'     // 选择频道
 import mChat from '@/views/mobile/chat'         // 聊天室
+import mSingleChat from '@/views/mobile/singleChat'         // 聊天室
 import mChannel from '@/views/mobile/channel'   // 频道列表
 import mChoose from '@/views/mobile/choose'     // 选择频道
 
 
 Vue.use(Router)
-
+ 
 export default new Router({
   routes: [
     {
       path: '/',
       name: 'index',
       component: Index,
-      redirect: '/message',
+      redirect: '/mLogin',
       children: [
         {
           path: '/message',
@@ -58,6 +59,11 @@ export default new Router({
       path: '/mlogin',
       name: 'mLogin',
       component: mLogin
+    },
+    {
+      path: '/msingleChat',
+      name: 'mSingleChat',
+      component: mSingleChat
     },
     {
       path: '/login',

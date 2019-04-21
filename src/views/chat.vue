@@ -241,6 +241,7 @@ export default {
 		
 		// 接收消息
 		socket.on('message', function (information) {
+			console.log('information', information);
       if(information.type=='msg'){
       	information.usermsg.body=obj.replaceFace(information.usermsg.body);
       	var time=information.usermsg.time;

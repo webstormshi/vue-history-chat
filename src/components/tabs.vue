@@ -1,7 +1,10 @@
 <template>
     <ul class="mtabs box-width" id="tabs">
         <li class="mtab" v-if="$route.path !== tab.url" v-for="(tab, index) in tabs">
-            <router-link :to="tab.url">
+            <router-link 
+                :to="{'path': tab.url, 
+                'query': { 'headimg': user.headimg, 'userName': user.userName}}"
+            >
                 <img :src="tab.icon" />
                 <p>{{tab.label}}</p>
             </router-link>
@@ -18,6 +21,9 @@
 <script>
 export default {
     name: 'Tabs',
+    props: {
+        'user': Object
+    },
     mounted() {
         this.setTitle();
     },

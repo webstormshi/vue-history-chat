@@ -21,7 +21,7 @@
 		<div class="foot box-width">
 			<img src="static/icon/audio_icon.png" />
 			<div 
-				class="input"
+				class="input" 
 				contenteditable="true" 
 				@input="handleInput"
 				@keydown.enter.prevent="send_msg"
@@ -53,27 +53,33 @@ export default {
 						body: '今天天气好哈哈～',
 						time: '6:30'
 					}
+				},
+				{
+					fid: '0',
+					tid: '2',
+					username: 'nishishu',
+					userhead: 'headimg02.jpg',
+					usermsg: {
+						body: '出来玩吧😄😄😂',
+						time: '7:50'
+					}
 				}
 			]
 		}
 	},
 	mounted() {
-		this.groupinfo = this.$route.params.group;
-		this.userInfo = {
-			headimg: this.$route.params.headimg,
-			userName: this.$route.params.userName
-		};
+		console.log('username', this.$route);
 		var box = document.getElementById('msgbox');
 		var biu=document.getElementById('biu');
 		this.scrollheight = box.scrollHeight;
 		this.userInfo = this.$route.params; 
-		document.title = this.groupinfo.name;
+		document.title = this.chat_title;
 		//监听回车
 		var _this = this;
 		document.onkeyup = function (e) {
 			var code = e.charCode || e.keyCode; 
 			if (code == 13) {  
-				_this.send_msg();
+			_this.send_msg();
 			}  
 		}
 		socket.on('message', function (information) {

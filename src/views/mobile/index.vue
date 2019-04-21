@@ -1,7 +1,7 @@
 <template>
     <div>
         <router-view></router-view>
-        <v-tabs />
+        <v-tabs :user="$route.params" />
     </div>
 </template>
 

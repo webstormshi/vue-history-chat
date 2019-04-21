@@ -68,7 +68,7 @@ export default {
 		  		//localStorage.setItem("curUser", JSON.stringify(userinfo));
 		  		//登陆后立即发送用户信息去服务端
 					socket.emit('message', {type:'onlinelist',username:userinfo.userName,userhead:userinfo.headimg,usermsg:{body:'',time:''}});
-		  		_this.$router.push({ name: 'mchat', params: userinfo});
+		  		_this.$router.push({ name: 'Message', params: userinfo});
   			}
   		});
   		socket.on('loginYZSB',function(loginInfo){
