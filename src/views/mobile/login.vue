@@ -41,6 +41,12 @@ export default {
 	mounted: function(){
 		document.title = "微信登录";
 		this.current_head=Math.floor(Math.random()*this.headimgArr.length);
+		if(sessionStorage.getItem('curUser')) {
+			var userInfo = JSON.parse(sessionStorage.getItem('curUser'));
+			this.login_name = userInfo.userName;
+			this.current_head = this.current_head;
+			this.login();
+        }
 	},
   methods: {
   	change_head(lr){
