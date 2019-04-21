@@ -80,11 +80,13 @@ export default {
         }
     },
     mounted() {
-        console.log('user', this.$route);
+        if(sessionStorage.getItem('curUser')) {
+            this.userInfo = JSON.parse(sessionStorage.getItem('curUser'));
+        }
     },
     methods: {
         handleClick(group) {
-            this.$router.push({ name: 'mchat', params: { ...this.$route.params, group: group } });
+            this.$router.push({ name: 'mchat', params: { ...this.userInfo, group: group } });
         }
     }
 }

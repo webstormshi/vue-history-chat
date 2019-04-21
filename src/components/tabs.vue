@@ -4,6 +4,7 @@
             <router-link 
                 :to="{'path': tab.url, 
                 'query': { 'headimg': user.headimg, 'userName': user.userName}}"
+                replace
             >
                 <img :src="tab.icon" />
                 <p>{{tab.label}}</p>

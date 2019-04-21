@@ -65,7 +65,7 @@ export default {
   		socket.on('loginYZCG',function(loginInfo){
   			if(loginInfo.status==1){
   				var userinfo={userName:_this.login_name, headimg:_this.headimgArr[_this.current_head]};
-		  		//localStorage.setItem("curUser", JSON.stringify(userinfo));
+		  		sessionStorage.setItem("curUser", JSON.stringify(userinfo));
 		  		//登陆后立即发送用户信息去服务端
 					socket.emit('message', {type:'onlinelist',username:userinfo.userName,userhead:userinfo.headimg,usermsg:{body:'',time:''}});
 		  		_this.$router.push({ name: 'Message', params: userinfo});

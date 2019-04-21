@@ -1,8 +1,8 @@
 <template>
     <div class="interact">
-        <header :style="{'backgroundImage': `url(${userinfo.userbg})`}">
-            <h1>{{userinfo.nickname}}</h1>
-            <img :src="userinfo.avatar" />
+        <header :style="{'backgroundImage': `url(https://wx4.sinaimg.cn/orj360/a3255108gy1g1wgndaltij20dw090aa5.jpg)`}">
+            <h1>{{userinfo.userName}}</h1>
+            <img :src="'static/headimg/' + userinfo.headimg" />
         </header>
         <ul class="menu">
             <li v-for="item in list">
@@ -45,8 +45,7 @@ export default {
             userinfo: {
                 uid: 1,
                 nickname: '四大名聊',
-                avatar: 'http://wx.qlogo.cn/mmopen/049dFBmhic79TM8ia7jYnPYjdYgFicUN4CyyfoEicnpibQcYIgkPrCXs1mPKTNTHMuMB4aEDg7XIJTt0jD8Uh65hCuJGtKnOJKPe2/64',
-                userbg: 'https://wx4.sinaimg.cn/orj360/a3255108gy1g1wgndaltij20dw090aa5.jpg'
+                avatar: 'http://wx.qlogo.cn/mmopen/049dFBmhic79TM8ia7jYnPYjdYgFicUN4CyyfoEicnpibQcYIgkPrCXs1mPKTNTHMuMB4aEDg7XIJTt0jD8Uh65hCuJGtKnOJKPe2/64'
             },
             list: [
                 {
@@ -88,6 +87,11 @@ export default {
                     comments: [{ fid: 1, from: '用户1', to: '用户2', tid: 2, content: '我是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是是你的演我是你的演'}, { fid: 2, tid: 1, from: '用户1', content: '我是你的演我是你的演'}, { fid: 2, from: '用户2', tid: 1, content: '我是你的演我是你的演'}]
                 }
             ]
+        }
+    },
+    mounted() {
+        if(sessionStorage.getItem('curUser')) {
+            this.userinfo = JSON.parse(sessionStorage.getItem('curUser'));
         }
     }
 }

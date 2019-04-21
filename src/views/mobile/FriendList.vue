@@ -157,9 +157,14 @@ export default {
             ]
         }
     },
+    mounted() {
+        if(sessionStorage.getItem('curUser')) {
+            this.userInfo = JSON.parse(sessionStorage.getItem('curUser'));
+        }
+    },
     methods: {
         handleOfficial() {
-            this.$router.push({ name: 'mSingleChat', params: this.$route.query });
+            this.$router.push({ name: 'mSingleChat', params: this.userInfo });
         },
         handleFriend(uid) {
             this.$router.push({ name: 'UserCard' });

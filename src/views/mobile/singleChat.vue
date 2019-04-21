@@ -88,12 +88,12 @@ export default {
 				_this.msg_list.push(information);
 				biu.play();
 				var box = document.getElementById('msgbox');
-				setTimeout(() => {
-					if(this.scrollheight !== box.scrollHeight) {
-						box.scrollTop=box.scrollHeight;
-					}
-					this.scrollheight = box.scrollHeight;
-				}, 0);
+				// setTimeout(() => {
+				// 	if(this.scrollheight !== box.scrollHeight) {
+				// 		box.scrollTop=box.scrollHeight;
+				// 	}
+				// 	this.scrollheight = box.scrollHeight;
+				// }, 0);
 			}
 		})
 	},

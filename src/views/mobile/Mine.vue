@@ -1,9 +1,9 @@
 <template>
     <div class="mine">
         <header>
-            <img :src="userinfo.avatar" />
+            <img :src="'static/headimg/' + userInfo.headimg" />
             <div class="userinfo">
-                <h1>{{userinfo.nickname}}</h1>
+                <h1>{{userInfo.userName}}</h1>
                 <p>当前角色：{{userinfo.actor}}【{{userinfo.play}}】</p>
                 <a>微信号：{{userinfo.nickname}}</a>
             </div>
@@ -59,6 +59,11 @@ export default {
                     avatar: 'http://img4.imgtn.bdimg.com/it/u=2428265785,4258666747&fm=26&gp=0.jpg'
                 }
             ]
+        }
+    },
+    mounted() {
+        if(sessionStorage.getItem('curUser')) {
+            this.userInfo = JSON.parse(sessionStorage.getItem('curUser'));
         }
     }
 }
